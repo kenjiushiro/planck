@@ -24,6 +24,7 @@ enum custom_keycodes  {
     GMAIL_EMAIL = SAFE_RANGE,
     LIVE_EMAIL,
     DEVARTIS_EMAIL,
+    TIENDANUBE_EMAIL,
     ALT_TAB,
     LSALT_TAB
 };
@@ -53,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     NUM_LAYER,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     LCTL_T(KC_ESC),  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_DEL,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT ,
-    KC_LCTL, KC_LGUI, KC_LALT, NAV_LAYER, SYM_LAYER,   KC_SPC,  FN_LAYER,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+    KC_LCTL, KC_LGUI, KC_LALT, NAV_LAYER, SYM_LAYER,   KC_SPC,  FN_LAYER,   LGUI_T(KC_LEFT), KC_DOWN, KC_UP,   KC_RGHT
 ),
 
 [_NUMERIC] = LAYOUT_planck_mit(
@@ -85,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_CONFIG] = LAYOUT_planck_mit(
-    XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, XXXXXXX, GMAIL_EMAIL,
-    XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, XXXXXXX,XXXXXXX, KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX, LIVE_EMAIL,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, DEVARTIS_EMAIL,
+    XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, LIVE_EMAIL, GMAIL_EMAIL,
+    XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, XXXXXXX,XXXXXXX, KC_BTN1, KC_BTN2, KC_BTN3, TIENDANUBE_EMAIL, DEVARTIS_EMAIL,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, _______, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX
 )
 };
@@ -107,6 +108,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DEVARTIS_EMAIL:
       if (record->event.pressed) {
           SEND_STRING("kushiro@devartis.com");
+      }
+      break;
+    case TIENDANUBE_EMAIL:
+      if (record->event.pressed) {
+          SEND_STRING("kenji.ushiro@tiendanube.com");
       }
       break;
     case ALT_TAB:
