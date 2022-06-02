@@ -259,10 +259,14 @@ void paste(void) {
 
 void changeBacklightColor(void) {
     switch (currentOS) {
+        case _MAC:
+            rgblight_setrgb_range(255, 255, 255, 0, 16);
             break;
         case _WINDOWS:
+            rgblight_setrgb_range(18, 216, 255, 0, 16);
             break;
         case _LINUX:
+            rgblight_setrgb_range(234, 169,5, 0, 16);
             break;
     }
 }
