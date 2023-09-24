@@ -151,75 +151,66 @@ void mission_control(void)
         break;
     case _LINUX:
         tap_code(KC_LGUI);
-        break;
-    }
-}
-
-void register_desktop_switch_modifier(void)
-{
-    switch (currentOS)
-    {
-    case _MAC:
-        register_code(KC_LCTL);
-        break;
-    case _WINDOWS:
-    case _LINUX:
-        register_code(KC_LCTL);
-        register_code(KC_LGUI);
-        break;
-    }
-}
-
-void unregister_desktop_switch_modifier(void)
-{
-    switch (currentOS)
-    {
-    case _MAC:
-        unregister_code(KC_LCTL);
-        break;
-    case _WINDOWS:
-    case _LINUX:
-        unregister_code(KC_LCTL);
-        unregister_code(KC_LGUI);
+        tap_code(KC_LGUI);
         break;
     }
 }
 
 void previous_desktop(void)
 {
-    register_desktop_switch_modifier();
-    if (currentOS == _LINUX)
+    switch (currentOS)
     {
-        tap_code(KC_UP);
-    }
-    else
-    {
+    case _MAC:
+        register_code(KC_LCTL);
         tap_code(KC_LEFT);
+        unregister_code(KC_LCTL);
+        break;
+    case _LINUX:
+        register_code(KC_LCTL);
+        register_code(KC_LALT);
+        tap_code(KC_LEFT);
+        unregister_code(KC_LCTL);
+        unregister_code(KC_LALT);
+    case _WINDOWS:
+        register_code(KC_LCTL);
+        register_code(KC_LGUI);
+        tap_code(KC_LEFT);
+        unregister_code(KC_LCTL);
+        unregister_code(KC_LGUI);
+        break;
     }
-    unregister_desktop_switch_modifier();
 }
 
 void next_desktop(void)
 {
-    register_desktop_switch_modifier();
-    if (currentOS == _LINUX)
+    switch (currentOS)
     {
-        tap_code(KC_DOWN);
-    }
-    else
-    {
+    case _MAC:
+        register_code(KC_LCTL);
         tap_code(KC_RIGHT);
+        unregister_code(KC_LCTL);
+        break;
+    case _LINUX:
+        register_code(KC_LCTL);
+        register_code(KC_LALT);
+        tap_code(KC_RIGHT);
+        unregister_code(KC_LCTL);
+        unregister_code(KC_LALT);
+    case _WINDOWS:
+        register_code(KC_LCTL);
+        register_code(KC_LGUI);
+        tap_code(KC_RIGHT);
+        unregister_code(KC_LCTL);
+        unregister_code(KC_LGUI);
+        break;
     }
-    unregister_desktop_switch_modifier();
 }
 
 void show_desktops(void)
 {
     if (currentOS == _LINUX)
     {
-        register_code(KC_LGUI);
-        tap_code(KC_D);
-        unregister_code(KC_LGUI);
+        tap_code(KC_LGUI);
     }
     else if (currentOS == _WINDOWS)
     {
@@ -229,9 +220,7 @@ void show_desktops(void)
     }
     else if (currentOS == _MAC)
     {
-        register_code(KC_LCTL);
-        tap_code(KC_UP);
-        unregister_code(KC_LCTL);
+        tap_code(KC_LGUI);
     }
 }
 
