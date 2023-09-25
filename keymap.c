@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //---TAB---|----Q----|----W----|----E----|----R----|----T----|----Y----|----U----|----I----|----O----|----P----|---BKP---|
           KC_TAB,   XXXXXXX,  KC_MS_U,  XXXXXXX,  XXXXXXX,  WIN_LYR,  KC_WH_L,  KC_WH_D,  KC_WH_U,  KC_WH_R,  EMAIL2,   EMAIL1,
         //---ESC---|----A----|----S----|----D----|----F----|----G----|----H----|----J----|----K----|----L----|----;----|---DEL---|
-          XXXXXXX,  KC_MS_L,  KC_MS_D,  KC_MS_R,  XXXXXXX,  MAC_LYR,  XXXXXXX,  KC_BTN1,  KC_BTN2,  KC_BTN3,  WRK_EMAIL2,WRK_EMAIL,
+          KC_PWR,   KC_MS_L,  KC_MS_D,  KC_MS_R,  XXXXXXX,  MAC_LYR,  XXXXXXX,  KC_BTN1,  KC_BTN2,  KC_BTN3,  WRK_EMAIL2,WRK_EMAIL,
         //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
           QK_BOOT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  LNX_LYR,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  DNI,      PHONE_NUMBER,
         //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
