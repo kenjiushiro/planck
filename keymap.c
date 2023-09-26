@@ -35,11 +35,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_NUMERIC] = LAYOUT_planck_grid(
         //---TAB---|----Q----|----W----|----E----|----R----|----T----|----Y----|----U----|----I----|----O----|----P----|---BKP---|
-          _______,  KC_TAB,   XXXXXXX,  XXXXXXX,  ASTERISK, XXXXXXX,  KC_EQL,   KC_7,     KC_8,     KC_9,     XXXXXXX,  KC_BSPC,
+          _______,  KC_TAB,   XXXXXXX,  XXXXXXX,  KC_ASTR,  XXXXXXX,  KC_EQL,   KC_7,     KC_8,     KC_9,     XXXXXXX,  KC_BSPC,
         //---ESC---|----A----|----S----|----D----|----F----|----G----|----H----|----J----|----K----|----L----|----;----|---DEL---|
-          KC_LCTL,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  PLUS_SIGN,KC_4,     KC_5,     KC_6,     KC_MINUS, KC_DEL,
+          KC_LCTL,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_PLUS,  KC_4,     KC_5,     KC_6,     KC_MINUS, KC_DEL,
         //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
-          KC_LSFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  ASTERISK, KC_1,     KC_2,     KC_3,     KC_SLSH,  KC_ENT,
+          KC_LSFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_ASTR, KC_1,     KC_2,     KC_3,     KC_SLSH,  KC_ENT,
         //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
           KC_LGUI,  XXXXXXX,  XXXXXXX,  KC_DOT,   KC_SPC,   KC_SPC,   KC_COMM,  KC_0,     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
     ),
@@ -57,20 +57,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYMBOLS] = LAYOUT_planck_grid(
         //---TAB---|----Q----|----W----|----E----|----R----|----T----|----Y----|----U----|----I----|----O----|----P----|---BKP---|
-          TILDE,    BANG,     PERCENT,  HASHTAG,  ASTERISK, XXXXXXX,  XXXXXXX,  DOLLAR,   CRL_BRC_O,CRL_BRC_C,KC_EQL,   KC_BSPC,
+          KC_TILD,  KC_EXLM,  KC_PERC,  KC_HASH,  KC_ASTR,  XXXXXXX,  XXXXXXX,  KC_DLR,   KC_LCBR,  KC_RCBR,  KC_EQL,   KC_BSPC,
         //---ESC---|----A----|----S----|----D----|----F----|----G----|----H----|----J----|----K----|----L----|----;----|---DEL---|
-          ARROBA,   DOLLAR,   KC_GRV,   DBL_QT,   KC_QUOT,  XXXXXXX,  LESS_THAN,PAR_OPN,  PAR_CLS,  XXXXXXX,  KC_MINUS, GREATER,
+          KC_AT,    KC_DLR,   KC_GRV,   KC_DQT,   KC_QUOT,  XXXXXXX,  KC_LT,    KC_LPRN,  KC_RPRN,  XXXXXXX,  KC_MINUS, KC_GT,
         //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
-          KC_LSFT,  KC_BSLS,  CARET,    AMPERSAND,PIPE,     XXXXXXX,  XXXXXXX,  SQR_BRC_O,SQR_BRC_C,XXXXXXX,  UND_SCR,  XXXXXXX,
+          KC_LSFT,  KC_BSLS,  KC_CIRC,  KC_AMPR,  KC_PIPE,  XXXXXXX,  XXXXXXX,  KC_LBRC,  KC_RBRC,  XXXXXXX,  KC_UNDS,  XXXXXXX,
         //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
-          XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  CONF_LYR, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX
+          XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  CONF_LYR, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
     ),
 
     [_FN_KEYS] = LAYOUT_planck_grid(
         //---TAB---|----Q----|----W----|----E----|----R----|----T----|----Y----|----U----|----I----|----O----|----P----|---BKP---|
-          XXXXXXX,  ARROBA,   LESS_THAN,GREATER,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    XXXXXXX,
+          XXXXXXX,  KC_AT,    KC_LT,    KC_GT,    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    XXXXXXX,
         //---ESC---|----A----|----S----|----D----|----F----|----G----|----H----|----J----|----K----|----L----|----;----|---DEL---|
-          KC_LCTL,  ARROBA,   PLUS_SIGN,KC_MINUS, KC_EQL,   XXXXXXX,  XXXXXXX,  KC_F5,    KC_F6,    KC_F7,    KC_F8,    XXXXXXX,
+          KC_LCTL,  KC_AT,    KC_PLUS,  KC_MINUS, KC_EQL,   XXXXXXX,  XXXXXXX,  KC_F5,    KC_F6,    KC_F7,    KC_F8,    XXXXXXX,
         //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
           KC_LSFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F9,    KC_F10,   KC_F11,   KC_F12,   XXXXXXX,
         //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
@@ -81,10 +81,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //---TAB---|----Q----|----W----|----E----|----R----|----T----|----Y----|----U----|----I----|----O----|----P----|---BKP---|
           KC_TAB,   XXXXXXX,  KC_MS_U,  XXXXXXX,  XXXXXXX,  WIN_LYR,  KC_WH_L,  KC_WH_D,  KC_WH_U,  KC_WH_R,  EMAIL2,   EMAIL1,
         //---ESC---|----A----|----S----|----D----|----F----|----G----|----H----|----J----|----K----|----L----|----;----|---DEL---|
-          KC_PWR,   KC_MS_L,  KC_MS_D,  KC_MS_R,  XXXXXXX,  MAC_LYR,  XXXXXXX,  KC_BTN1,  KC_BTN2,  KC_BTN3,  WRK_EMAIL2,WRK_EMAIL,
+          XXXXXXX,  KC_MS_L,  KC_MS_D,  KC_MS_R,  XXXXXXX,  MAC_LYR,  XXXXXXX,  KC_BTN1,  KC_BTN2,  KC_BTN3,  WRK_EMAIL2,WRK_EMAIL,
         //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
-          QK_BOOT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  LNX_LYR,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  DNI,      PHONE_NUMBER,
+          QK_BOOT,  DM_REC1,  DM_RSTP,  DM_PLY1,  XXXXXXX,  LNX_LYR,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  DNI,      PHONE_NUMBER,
         //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
-          XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
+          XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_HUI
     )
 };
