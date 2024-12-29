@@ -85,6 +85,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
           QK_BOOT,  DM_REC1,  DM_PLY1,  XXXXXXX,  XXXXXXX,  LNX_LYR,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  DNI,      PHONE_NUMBER,
         //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
-          DM_RSTP,  DM_REC2,  DM_PLY2,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_HUI
+          DM_RSTP,  DM_REC2,  DM_PLY2,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  GAMING_LYR
+    ),
+
+    [_GAMING] = LAYOUT_planck_grid(
+    //---TAB---|----Q----|----W----|----E----|----R----|----T----|----Y----|----U----|----I----|----O----|----P----|---BKP---|
+        KC_ESC,     KC_1,     KC_2,     KC_3,     KC_4,     KC_5,  KC_6,     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  DEFAULT_LYR,
+    //---ESC---|----A----|----S----|----D----|----F----|----G----|----H----|----J----|----K----|----L----|----;----|---DEL---|
+        KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    //---SFT---|----Z----|----X----|----C----|----V----|----B----|----N----|----M----|----,----|----.----|----/----|---ENT---|
+        KC_LSFT,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,     
+    //---CTR---|---GUI---|---ALT---|---NAV---|---SYM---|---SPC---|---SPC---|---FNC---|---LFT---|---DWN---|---UP----|---RGT---|
+        KC_LCTL,     KC_Z,     KC_X,     KC_C,     KC_V,   KC_SPC,   KC_SPC,  MO(_QWERTY),  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX
     )
+
 };
